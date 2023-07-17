@@ -49,6 +49,7 @@ sequenceDiagram
     Route53-->>DNS: Alias record (s3-website-us-east-1.amazonaws.com)
     DNS-->>User: Provides S3 bucket address
     User->>S3: Request for website
+    Note over S3,User: No HTTPS, communication is not secure
     S3-->>User: Responds with website content
 ```
 
